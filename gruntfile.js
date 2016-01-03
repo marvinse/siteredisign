@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                 dest: 'dev/js/main.js'
             },
             css: {
-                src: ['dev/components/**/*.css','!dev/components/global/*.css'],
+                src: ['dev/css/vendor/*.css','dev/components/**/*.css','!dev/components/global/*.css'],
                 dest: 'dev/css/main.css'
             },
         },
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
                 tasks: ['sass', 'concat', 'cssmin']
             },
             hbs: {
-                files: ['dev/*/*.hbs'],
+                files: ['dev/*/*.hbs','dev/*/*/*.hbs'],
                 tasks: ['compile-handlebars']
             }
         }
@@ -100,6 +100,6 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['uglify', 'concat']);
-    grunt.registerTask('server', ['copy','express','watch']);
+    grunt.registerTask('server', ['express','copy','watch']);
 
 };
