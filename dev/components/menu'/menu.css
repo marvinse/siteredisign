@@ -4,6 +4,14 @@
   src: url("fonts/raleway-bold.eot?#iefix") format("embedded-opentype"), url("fonts/raleway-bold.woff") format("woff"), url("fonts/raleway-bold.ttf") format("truetype"), url("fonts/raleway-bold.svg#ralewaybold") format("svg");
   font-weight: normal;
   font-style: normal; }
-.menu {
-  background: #222;
-  height: 65px; }
+.menu ul {
+  padding: 0; }
+  .menu ul .fa {
+    background: #222;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    display: block;
+    padding: 10px; }
+    .menu ul .fa:first-of-type {
+      background: #DE3926;
+      border-bottom: 0; }
