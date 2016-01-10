@@ -2515,20 +2515,112 @@ th {
 footer {
   background: blue; }
 
-@font-face {
-  font-family: 'ralewaybold';
-  src: url("fonts/raleway-bold.eot");
-  src: url("fonts/raleway-bold.eot?#iefix") format("embedded-opentype"), url("fonts/raleway-bold.woff") format("woff"), url("fonts/raleway-bold.ttf") format("truetype"), url("fonts/raleway-bold.svg#ralewaybold") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+.fullimage {
+  font-family: ralewaybold;
+  width: 100%; }
+  @media screen and (min-width: 1024px) {
+    .fullimage {
+      float: left;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      width: calc(50% - 35px); } }
+  .fullimage img {
+    width: 100%; }
+    @media screen and (min-width: 1024px) {
+      .fullimage img {
+        position: absolute;
+        height: 100%; } }
+  .fullimage h4 {
+    background: #DE3926;
+    color: white;
+    margin: 0;
+    padding: 15px; }
+    @media screen and (min-width: 1024px) {
+      .fullimage h4 {
+        display: inline-block;
+        font-size: 48px;
+        margin: 100px 0 0;
+        padding: 40px;
+        position: relative;
+        top: 0; } }
+  @media screen and (min-width: 1024px) {
+    .fullimage:nth-of-type(2) h4 {
+      position: absolute;
+      right: 0; } }
+  @media screen and (min-width: 1024px) {
+    .fullimage:nth-of-type(3) h4 {
+      background: #222; } }
+  @media screen and (min-width: 1024px) {
+    .fullimage h2 {
+      background: white;
+      color: #222;
+      font-size: 30px;
+      display: block;
+      margin: 0;
+      padding: 20px 40px;
+      position: relative;
+      top: 0;
+      width: 70%; } }
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    float: left; } }
 .menu ul {
+  margin: 0;
   padding: 0; }
-  .menu ul .fa {
+  @media screen and (min-width: 1024px) {
+    .menu ul {
+      background: #222;
+      height: 100%;
+      position: relative;
+      width: 70px; } }
+  .menu ul li {
     background: #222;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     color: white;
     display: block;
     padding: 10px; }
-    .menu ul .fa:first-of-type {
+    .menu ul li:first-of-type {
       background: #DE3926;
-      border-bottom: 0; }
+      border-bottom: 0;
+      cursor: pointer; }
+    .menu ul li:nth-of-type(n+2) {
+      display: none; }
+      @media screen and (min-width: 1024px) {
+        .menu ul li:nth-of-type(n+2) {
+          display: inline-block; } }
+    .menu ul li span {
+      text-align: center;
+      min-width: 40px; }
+      @media screen and (min-width: 1024px) {
+        .menu ul li span:not(.fa-bars) {
+          color: #949494; } }
+      .menu ul li span:not(.fa-bars):hover {
+        color: white; }
+    .menu ul li h4 {
+      font-family: 'ralewaybold';
+      display: inline-block;
+      margin: 0; }
+      @media screen and (min-width: 1024px) {
+        .menu ul li h4 {
+          display: none; } }
+    .menu ul li a {
+      color: white;
+      display: block;
+      text-decoration: none; }
+    @media screen and (min-width: 1024px) {
+      .menu ul li {
+        display: inline-block;
+        max-width: 70px;
+        overflow: hidden;
+        padding: 15px; } }
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("/fonts/raleway-bold.eot");
+  src: url("/fonts/raleway-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/raleway-bold.woff") format("woff"), url("/fonts/raleway-bold.ttf") format("truetype"), url("/fonts/raleway-bold.svg#ralewaybold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  box-sizing: border-box; }

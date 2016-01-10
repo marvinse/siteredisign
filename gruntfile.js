@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                 dest: 'dev/js/main.js'
             },
             css: {
-                src: ['dev/css/vendor/*.css','dev/components/**/*.css','!dev/components/global/*.css'],
+                src: ['dev/css/vendor/*.css','dev/components/**/*.css','!dev/components/global/*.css', 'dev/components/global/global.css'],
                 dest: 'dev/css/main.css'
             },
         },

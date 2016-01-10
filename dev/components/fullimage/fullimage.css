@@ -1,0 +1,47 @@
+.fullimage {
+  font-family: ralewaybold;
+  width: 100%; }
+  @media screen and (min-width: 1024px) {
+    .fullimage {
+      float: left;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      width: calc(50% - 35px); } }
+  .fullimage img {
+    width: 100%; }
+    @media screen and (min-width: 1024px) {
+      .fullimage img {
+        position: absolute;
+        height: 100%; } }
+  .fullimage h4 {
+    background: #DE3926;
+    color: white;
+    margin: 0;
+    padding: 15px; }
+    @media screen and (min-width: 1024px) {
+      .fullimage h4 {
+        display: inline-block;
+        font-size: 48px;
+        margin: 100px 0 0;
+        padding: 40px;
+        position: relative;
+        top: 0; } }
+  @media screen and (min-width: 1024px) {
+    .fullimage:nth-of-type(2) h4 {
+      position: absolute;
+      right: 0; } }
+  @media screen and (min-width: 1024px) {
+    .fullimage:nth-of-type(3) h4 {
+      background: #222; } }
+  @media screen and (min-width: 1024px) {
+    .fullimage h2 {
+      background: white;
+      color: #222;
+      font-size: 30px;
+      display: block;
+      margin: 0;
+      padding: 20px 40px;
+      position: relative;
+      top: 0;
+      width: 70%; } }

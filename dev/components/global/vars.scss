@@ -1,3 +1,13 @@
 $dark-gray: #222;
-$light-text: #949494;
+$light-gray: #949494;
 $red: #DE3926;
+$tablet-portrait: 768px;
+$tablet-landscape: 1024px;
+
+@mixin media($rules,$mediasize){
+	@media screen and (min-width: $mediasize){
+		@each $property, $value in $rules {
+			#{$property}: $value;
+		}
+	}
+}

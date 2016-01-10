@@ -1,0 +1,62 @@
+@import "../global/vars";
+$desktopsize:calc(50% - 35px);
+.fullimage{
+	font-family: ralewaybold;
+	width: 100%;
+	@include media((
+		float: left,
+		height: 100%,
+		overflow: hidden,
+		position: relative,
+		width: $desktopsize
+	),$tablet-landscape);
+	img{
+		width: 100%;
+		@include media((
+			position: absolute,
+			height: 100%
+		),$tablet-landscape);	
+	}
+	h4{
+		background: $red;
+		color: white;
+		margin: 0;
+		padding: 15px;
+		@include media((
+			display: inline-block,
+			font-size: 48px,
+			margin: 100px 0 0,
+			padding: 40px,
+			position: relative,
+			top: 0
+		),$tablet-landscape);
+	}
+	&:nth-of-type(2){
+		h4{
+			@include media((
+				position: absolute,
+				right: 0
+			),$tablet-landscape);
+		}
+	}
+	&:nth-of-type(3){
+		h4{
+			@include media((
+				background: $dark-gray,
+			),$tablet-landscape);
+		}
+	}
+	h2{
+		@include media((
+			background: white,
+			color: $dark-gray,
+			font-size: 30px,
+			display: block,
+			margin: 0,
+			padding: 20px 40px,
+			position: relative,
+			top: 0,
+			width: 70%
+		),$tablet-landscape);
+	}
+}

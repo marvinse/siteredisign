@@ -1,8 +1,18 @@
-@import "../global/global";
+@import "../global/vars";
 .menu{
+	@include media((
+		float: left
+	),$tablet-landscape);
 	ul{
+		margin: 0;
 		padding: 0;
-		.fa{
+		@include media((
+			background: $dark-gray,
+			height: 100%,
+			position: relative,
+			width: 70px,
+		),$tablet-landscape);
+		li{
 			background: $dark-gray;
 			border-bottom: 1px solid rgba(white,0.4);
 			color: white;
@@ -11,7 +21,45 @@
 			&:first-of-type{
 				background: $red;
 				border-bottom: 0;
+				cursor: pointer;
 			}
+			&:nth-of-type(n+2){
+				display: none;
+				@include media((
+					display: inline-block
+				),$tablet-landscape);
+			}
+			span{
+				text-align: center;
+				min-width: 40px;
+				&:not(.fa-bars){
+					@include media((
+						color: $light-gray,
+					),$tablet-landscape);	
+					&:hover{
+						color: white;
+					}
+				}
+			}
+			h4{
+				font-family: 'ralewaybold';
+				display: inline-block;
+				margin: 0;
+				@include media((
+					display: none
+				),$tablet-landscape);
+			}
+			a{
+				color: white;
+				display: block;
+				text-decoration: none;
+			}
+			@include media((
+				display: inline-block,
+				max-width: 70px,
+				overflow: hidden,
+				padding: 15px
+			),$tablet-landscape);
 		}
 	}
 }
