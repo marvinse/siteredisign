@@ -10,6 +10,15 @@ $desktopsize:calc(50% - 35px);
 		position: relative,
 		width: $desktopsize
 	),$tablet-landscape);
+	&:last-of-type{
+		img{
+			display: none;
+			@include media((
+				display: inline-block
+			),$tablet-landscape);
+		}
+
+	}
 	img{
 		width: 100%;
 		@include media((
@@ -20,22 +29,28 @@ $desktopsize:calc(50% - 35px);
 	h4{
 		background: $red;
 		color: white;
+		float: left;
 		margin: 0;
 		padding: 15px;
+		width: 50%;
 		@include media((
 			display: inline-block,
+			float: none,
 			font-size: 48px,
 			margin: 100px 0 0,
 			padding: 40px,
 			position: relative,
-			top: 0
+			top: 0,
+			width: auto
 		),$tablet-landscape);
 	}
 	&:nth-of-type(2){
 		h4{
+			text-align: right;
 			@include media((
 				position: absolute,
-				right: 0
+				right: 0,
+				text-align: left
 			),$tablet-landscape);
 		}
 	}
@@ -47,16 +62,53 @@ $desktopsize:calc(50% - 35px);
 		}
 	}
 	h2{
+		background: $dark-gray;
+		color: white;
+		clear: both;
+		text-align: center;
+		margin: 0;
+		padding: 20px 40px;
 		@include media((
 			background: white,
 			color: $dark-gray,
 			font-size: 30px,
 			display: block,
-			margin: 0,
-			padding: 20px 40px,
 			position: relative,
+			text-align: left,
 			top: 0,
 			width: 70%
 		),$tablet-landscape);
+	}
+	&__socialbar{
+		background: white;
+		@include media((
+			position: absolute,
+			bottom: 60px
+		),$tablet-landscape);
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				display: inline-block;
+				float: left;
+				list-style: none;
+				text-align: center;
+				height: 80px;
+				width: calc(100% / 5);
+				@include media((
+					border-right: 1px solid $light-gray,
+					float: none,
+					width: 80px
+				),$tablet-landscape);
+				a{
+					color: $dark-gray;
+					line-height: 80px;
+					text-decoration: none;
+					&:hover{
+						color: $red;
+					}
+				}
+			}
+		}
 	}
 }

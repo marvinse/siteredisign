@@ -1,7 +1,20 @@
 <div class="fullimage">
 	<img src="{{imgsrc}}" alt="">
-	<h4>{{description}}</h4>
+	{{#if description}}
+		<h4>{{description}}</h4>
+	{{/if}}
 	{{#if caption}}
 		<h2>{{caption}}</h2>
+	{{/if}}
+	{{#if socialbar}}
+		<div class="fullimage__socialbar">
+			<ul>
+				<li><a href="#" class="fa fa-2x fa-facebook"></a></li>
+				<li><a href="#" class="fa fa-2x fa-twitter"></a></li>
+				<li><a href="#" class="fa fa-2x fa-linkedin"></a></li>
+				<li><a href="#" class="fa fa-2x fa-instagram"></a></li>
+				<li><a href="#" class="fa fa-2x fa-youtube"></a></li>
+			</ul>
+		</div>
 	{{/if}}
 </div>

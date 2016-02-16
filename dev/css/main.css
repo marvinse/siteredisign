@@ -2525,6 +2525,11 @@ footer {
       overflow: hidden;
       position: relative;
       width: calc(50% - 35px); } }
+  .fullimage:last-of-type img {
+    display: none; }
+    @media screen and (min-width: 1024px) {
+      .fullimage:last-of-type img {
+        display: inline-block; } }
   .fullimage img {
     width: 100%; }
     @media screen and (min-width: 1024px) {
@@ -2534,34 +2539,74 @@ footer {
   .fullimage h4 {
     background: #DE3926;
     color: white;
+    float: left;
     margin: 0;
-    padding: 15px; }
+    padding: 15px;
+    width: 50%; }
     @media screen and (min-width: 1024px) {
       .fullimage h4 {
         display: inline-block;
+        float: none;
         font-size: 48px;
         margin: 100px 0 0;
         padding: 40px;
         position: relative;
-        top: 0; } }
-  @media screen and (min-width: 1024px) {
-    .fullimage:nth-of-type(2) h4 {
-      position: absolute;
-      right: 0; } }
+        top: 0;
+        width: auto; } }
+  .fullimage:nth-of-type(2) h4 {
+    text-align: right; }
+    @media screen and (min-width: 1024px) {
+      .fullimage:nth-of-type(2) h4 {
+        position: absolute;
+        right: 0;
+        text-align: left; } }
   @media screen and (min-width: 1024px) {
     .fullimage:nth-of-type(3) h4 {
       background: #222; } }
-  @media screen and (min-width: 1024px) {
-    .fullimage h2 {
-      background: white;
-      color: #222;
-      font-size: 30px;
-      display: block;
+  .fullimage h2 {
+    background: #222;
+    color: white;
+    clear: both;
+    text-align: center;
+    margin: 0;
+    padding: 20px 40px; }
+    @media screen and (min-width: 1024px) {
+      .fullimage h2 {
+        background: white;
+        color: #222;
+        font-size: 30px;
+        display: block;
+        position: relative;
+        text-align: left;
+        top: 0;
+        width: 70%; } }
+  .fullimage__socialbar {
+    background: white; }
+    @media screen and (min-width: 1024px) {
+      .fullimage__socialbar {
+        position: absolute;
+        bottom: 60px; } }
+    .fullimage__socialbar ul {
       margin: 0;
-      padding: 20px 40px;
-      position: relative;
-      top: 0;
-      width: 70%; } }
+      padding: 0; }
+      .fullimage__socialbar ul li {
+        display: inline-block;
+        float: left;
+        list-style: none;
+        text-align: center;
+        height: 80px;
+        width: calc(100% / 5); }
+        @media screen and (min-width: 1024px) {
+          .fullimage__socialbar ul li {
+            border-right: 1px solid #949494;
+            float: none;
+            width: 80px; } }
+        .fullimage__socialbar ul li a {
+          color: #222;
+          line-height: 80px;
+          text-decoration: none; }
+          .fullimage__socialbar ul li a:hover {
+            color: #DE3926; }
 
 @media screen and (min-width: 1024px) {
   .menu {
@@ -2616,10 +2661,46 @@ footer {
         overflow: hidden;
         padding: 15px; } }
 
+@media screen and (min-width: 1024px) {
+  .whitecontainer {
+    float: left;
+    padding: 15px;
+    width: calc(50% - 35px); } }
+.whitecontainer h1, .whitecontainer h2, .whitecontainer h3 {
+  font-family: ralewaybold; }
+.whitecontainer__title {
+  color: #222;
+  text-transform: uppercase; }
+  .whitecontainer__title:after {
+    border-top: 3px solid #DE3926;
+    content: "";
+    display: block;
+    margin-top: 5px;
+    width: 100px; }
+.whitecontainer__box {
+  margin-bottom: 40px; }
+  .whitecontainer__box h2 {
+    color: #222;
+    font-size: 22px; }
+  .whitecontainer__box h3 {
+    color: #949494;
+    font-size: 18px;
+    border-bottom: 1px solid #f3f3f3;
+    padding-bottom: 10px; }
+.whitecontainer p {
+  color: #949494;
+  font-family: ralewayregular; }
+
 @font-face {
   font-family: 'ralewaybold';
   src: url("/fonts/raleway-bold.eot");
   src: url("/fonts/raleway-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/raleway-bold.woff") format("woff"), url("/fonts/raleway-bold.ttf") format("truetype"), url("/fonts/raleway-bold.svg#ralewaybold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("/fonts/raleway-regular.eot");
+  src: url("/fonts/raleway-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/raleway-regular.woff") format("woff"), url("/fonts/raleway-regular.ttf") format("truetype"), url("/fonts/raleway-regular.svg#ralewaybold") format("svg");
   font-weight: normal;
   font-style: normal; }
 * {

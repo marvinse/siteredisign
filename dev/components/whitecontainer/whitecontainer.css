@@ -1,0 +1,29 @@
+@media screen and (min-width: 1024px) {
+  .whitecontainer {
+    float: left;
+    padding: 15px;
+    width: calc(50% - 35px); } }
+.whitecontainer h1, .whitecontainer h2, .whitecontainer h3 {
+  font-family: ralewaybold; }
+.whitecontainer__title {
+  color: #222;
+  text-transform: uppercase; }
+  .whitecontainer__title:after {
+    border-top: 3px solid #DE3926;
+    content: "";
+    display: block;
+    margin-top: 5px;
+    width: 100px; }
+.whitecontainer__box {
+  margin-bottom: 40px; }
+  .whitecontainer__box h2 {
+    color: #222;
+    font-size: 22px; }
+  .whitecontainer__box h3 {
+    color: #949494;
+    font-size: 18px;
+    border-bottom: 1px solid #f3f3f3;
+    padding-bottom: 10px; }
+.whitecontainer p {
+  color: #949494;
+  font-family: ralewayregular; }

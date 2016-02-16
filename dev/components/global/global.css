@@ -4,5 +4,11 @@
   src: url("/fonts/raleway-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/raleway-bold.woff") format("woff"), url("/fonts/raleway-bold.ttf") format("truetype"), url("/fonts/raleway-bold.svg#ralewaybold") format("svg");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("/fonts/raleway-regular.eot");
+  src: url("/fonts/raleway-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/raleway-regular.woff") format("woff"), url("/fonts/raleway-regular.ttf") format("truetype"), url("/fonts/raleway-regular.svg#ralewaybold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 * {
   box-sizing: border-box; }

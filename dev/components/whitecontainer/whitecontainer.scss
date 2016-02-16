@@ -1,0 +1,40 @@
+@import "../global/vars";
+$desktopsize:calc(50% - 35px);
+.whitecontainer{
+	@include media((
+		float: left,
+		padding: 15px,
+		width: $desktopsize
+	),$tablet-landscape);
+	h1, h2, h3{
+		font-family: ralewaybold;
+	}
+	&__title{
+		color: $dark-gray;
+		text-transform: uppercase;
+		&:after{
+		    border-top: 3px solid #DE3926;
+		    content: "";
+		    display: block;
+		    margin-top: 5px;
+		    width: 100px;
+		}
+	}
+	&__box{
+		margin-bottom: 40px;
+		h2{
+			color: $dark-gray;
+			font-size: 22px;
+		}
+		h3{
+			color: $light-gray;
+			font-size: 18px;
+			border-bottom: 1px solid #f3f3f3;
+			padding-bottom: 10px;
+		}
+	}
+	p{
+		color: $light-gray;
+		font-family: ralewayregular;
+	}
+}
